@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贪吃蛇源码</title>
+</head>
+<body style="background-color:yellow;">
+<style>
+    p {
+        background: yellow;
+    }
+</style>
+
+    <h2 style="background-color:red; text-align: center">贪吃蛇源码</h2>
+    <p># -*- coding:utf-8 -*-
+</p><p>import pygame
+</p><p>import sys
+</p><p>import random
+</p><p>
+</p><p>pygame.init()
+</p><p>screen = pygame.display.set_mode((800, 600))
+</p><p>pygame.display.set_caption("eatsnake")
+</p><p>
+</p><p>fclock = pygame.time.Clock()
+</p><p>
+</p><p>
+</p><p>food = (4, 5)
+</p><p>body = [(1, 1)]
+</p><p>head = (1, 2)
+</p><p>
+</p><p>times = 0
+</p><p>direction = "right"
+</p><p>old_direction = "right"
+</p><p>alive = True
+</p><p>pause = False
+</p><p>
+</p><p>BLOCK = 0, 0, 0
+</p><p>GREEN = 0, 255, 0
+</p><p>RED = 255, 0, 0
+</p><p>BLUE = 0, 0, 255
+</p><p>WHITE = 255, 255, 255
+</p><p>back_color = WHITE
+</p><p>
+</p><p>
+</p><p>def new_draw_rect(zb, color,screen):
+</p><p>    pygame.draw.rect(screen,color,((zb[1]-1)*50+1,(zb[0]-1)*50+1,48,48))
+</p><p>
+</p><p>
+</p><p>def get_front(head, direction):
+</p><p>    x, y = head
+</p><p>    if direction == "up":
+</p><p>        return x-1, y
+</p><p>    elif direction == "left":
+</p><p>        return x, y-1
+</p><p>    elif direction == "down":
+</p><p>        return x+1, y
+</p><p>    elif direction == "right":
+</p><p>        return x, y+1
+</p><p>
+</p><p>
+</p><p>def ask_alive(front, body):
+</p><p>    x, y = front
+</p><p>    if x < 0 or x > 12 or y < 0 or y >16 :
+</p><p>        return False
+</p><p>    if front in body:
+</p><p>        return False
+</p><p>    return True
+</p><p>
+</p><p>
+</p><p>def new_food(head, body):
+</p><p>    i = 0
+</p><p>    while i < 100:
+</p><p>        x = random.randint(1, 12)
+</p><p>        y = random.randint(1, 16)
+</p><p>        if (x, y) != head and (x, y) not in body:
+</p><p>            return (x, y), True
+</p><p>        i += 1
+</p><p>    else:
+</p><p>        return (0, 0), False
+</p><p>
+</p><p>
+</p><p>def direction_yes_no(direction, old_direction):
+</p><p>    d = {"up": "down", "down": "up", "left": "right", "right": "left"}
+</p><p>    if d[direction] == old_direction:
+</p><p>        return old_direction
+</p><p>    return direction
+</p><p>
+</p><p>#food = new_food(head,body)
+</p><p>
+</p><p>while 1:
+</p><p>    for event in pygame.event.get():
+</p><p>        if event.type == pygame.QUIT:
+</p><p>            sys.exit()
+</p><p>        elif event.type == pygame.KEYDOWN:
+</p><p>            if event.key == pygame.K_UP:
+</p><p>                direction = "up"
+</p><p>            elif event.key == pygame.K_LEFT:
+</p><p>                direction = "left"
+</p><p>            elif event.key == pygame.K_DOWN:
+</p><p>                direction = "down"
+</p><p>            elif event.key == pygame.K_RIGHT:
+</p><p>                direction = "right"
+</p><p>            elif event.key == pygame.K_p:
+</p><p>                pause = not pause
+</p><p>    if times >= 100 and alive and (not pause):
+</p><p>        direction = direction_yes_no(direction, old_direction)
+</p><p>        old_direction = direction
+</p><p>        front = get_front(head, direction)
+</p><p>        alive = ask_alive(front, body)
+</p><p>        if alive:
+</p><p>            body.append(head)
+</p><p>            head = front
+</p><p>            if food == head:
+</p><p>                food, alive = new_food(head, body)
+</p><p>            else:
+</p><p>                body.pop(0)
+</p><p>        else:
+</p><p>            back_color = BLOCK
+</p><p>            pygame.display.set_caption("game over")
+</p><p>        times = 0
+</p><p>    else:
+</p><p>        times += 1
+</p><p>
+</p><p>    screen.fill(back_color)
+</p><p>    new_draw_rect(food, RED, screen)
+</p><p>    for i in body:
+</p><p>        new_draw_rect(i, BLUE, screen)
+</p><p>    new_draw_rect(head, GREEN, screen)
+</p><p>
+</p><p>    fclock.tick(100)
+</p><p>    pygame.display.update()</p>
+
+
+</body>
+</html>

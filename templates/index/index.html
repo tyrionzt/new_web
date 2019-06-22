@@ -1,0 +1,347 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Creative Coming Soon Template">
+    <meta name="author" content="Hitesh Jariwala">
+    <meta name="keywords" content="">
+    <!-- title -->
+    <title>主页</title>
+    <!-- CSS IMPORT -->
+    <link rel="stylesheet" href="../../static/css/style.css" type="text/css">
+    <!-- support HTML5 elements and media queries for IE9 -->
+    <!--[if lt IE 9]>
+      	<script src="js/html5shiv.js"></script>
+      	<script src="js/respond.min.js"></script>
+    	<![endif]-->
+</head>
+<body>
+    <!-- preloader -->
+    <div class="preloader-container">
+        <div class="content-container">
+            <!-- preloader -->
+            <span class="spinner-section-far"></span>
+            <!-- end preloader -->
+            <h6 class="preloader-text">
+                LOADING</h6>
+        </div>
+    </div>
+    <!-- end preloader -->
+    <!-- logo -->
+    <img class="img-logo" alt="logo" src="../../static/img/logo_white.png" />
+    <!-- end logo -->
+    <!-- menu -->
+     <div class="open">
+        <div class="cls">
+        </div>
+        <div>
+            <ul class="sub-menu-t">
+                <li class="active"><a class="menu-link" data-section="home" data-nav-title="home"
+                    data-section-pos="0" data-section-posy="0">Home <i class="fa fa-fw fa-home"></i>
+                </a></li>
+                <li><a class="menu-link" data-section="about" data-nav-title="about" data-section-pos="0"
+                    data-section-posy="-100">About Me <i class="fa fa-fw fa-star-o"></i></a></li>
+                <li><a class="menu-link" data-section="works" data-nav-title="works" data-section-pos="-100"
+                    data-section-posy="-100">Skills <i class="fa fa-fw fa-bell-o"></i></a></li>
+                <li><a class="menu-link" data-section="contact" data-nav-title="contact" data-section-pos="-100"
+                    data-section-posy="0">Contact Me<i class="fa fa-fw fa-list"></i></a></li>
+            </ul>
+        </div>
+        <div class="cls">
+        </div>
+    </div>
+    <!-- end menu  -->
+    <!-- page container -->
+    <div class="page-container">
+        <!-- section container -->
+        <div class="section-container">
+            <!-- home section -->
+            <section class="home-section">
+        	    	<!-- section background -->
+        	    	<div class="bg-container"></div>
+                	<!-- end section background -->
+                	<!-- content -->
+                	<div class="content col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-rlt no-pad centering-y">            	    	
+            	    	<div class="col-md-12 col-sm-12">
+                	    	<!-- headline -->
+                	    	<h1>Home</h1>
+{#                            <div class="sub-title" id="wordsrotator">#}
+{#                		    	<h4>我叫张涛</h4>#}
+{#                	    	</div>                     	    	#}
+                	    	<!-- end headline -->                               
+                	    	<!-- short description -->
+                	    	<p class="desc">
+                		    	毕业于武汉理工大学信息工程学院，喜欢编程，具有扎实的Python编程基础，熟悉MySQL数据库，熟悉redis和redis集群，了解网络爬虫相关知识；
+                        有flask和django实际开发经验。能够在Linux环境下开发，熟悉Linux下的常用命令。自学能力强，有良好的分析和解决问题的能力，责任心强，能承受较大的工作压力，熟练使用git和jenkins，熟练docker的使用
+                	    	</p>
+                	    	<!-- end short description -->
+                            <!-- countdown container -->
+                        	<div id="countdown" class="countdown-container">
+                    	    	<!-- days left -->
+                            	<div class="dash days_dash" >
+                			    	<div class="counter">
+            	    	    	        <div class="dash_title">简历</div>
+            	    	    	        <a href="/resume/" target="_blank"><div class="content">
+                                            <img src="{% static 'img/logo_resume.jpg' %}" height=60px width=60px alt="resume logo">
+                                        </div></a>
+{#                                        <a href="/resume/"><img src="{% static 'img/logo_resume.jpg' %}" height=90px width=90px></a>#}
+							        </div>
+                		    	</div>
+                                <!-- end days left -->
+                                <!-- hours left -->
+                                <div class="dash hours_dash">
+            	    		        <div class="counter">
+            	    	    	        <div class="dash_title">相册</div>
+            	    	    	        <a href="/gallery/" target="_blank"><div class="content">
+                                            <img src="{% static 'img/logo_gallery.jpg' %}" height=60px width=60px alt="gallery logo">
+                                        </div></a>
+							        </div>
+            	    	        </div>
+                                <!-- end hours left -->
+                                <!-- minutes left -->
+                                <div class="dash minutes_dash">
+            	    		        <div class="counter">
+            	        		        <div class="dash_title">生活娱乐</div>
+            	        		        <a href="/fun/" target="_blank"><div class="content">
+                                            <img src="{% static 'img/logo_fun.jpg' %}" height=60px width=60px alt="fun logo">
+                                        </div></a>
+							        </div>
+                		        </div>
+                                <!-- minutes left -->
+                		        <div class="dash seconds_dash">
+                			        <div class="counter">
+                		    	        <div class="dash_title">个人喜好</div>
+                		    	        <a href="/private/" target="_blank"><div class="content">
+                                            <img src="{% static 'img/logo_private.jpg' %}" height=60px width=60px alt="private logo">
+                                        </div></a>
+							        </div>
+                		        </div>
+                                <!-- end minutes left -->
+            		        </div>
+                        	<!-- end countdown container -->
+                    	</div>                    	
+                	</div>
+        <!-- end content -->
+        </section>
+            <!-- end home section -->
+            <!-- about section -->
+            <section class="about-section">
+        	    	<!-- section background -->
+        	    	<div class="bg-container-static"></div>
+                	<!-- end section background -->            
+                	<!-- content -->
+                	<div class="content col-md-8 col-md-offset-2 col-sm-12 col-sm-rlt col-xs-12 no-pad centering-y">
+                    	<div class="col-md-12 col-sm-12">
+                         <h1>About</h1>
+                	    	<!-- company description -->
+                        	<div class="desc">
+                    	    	<!-- quote -->
+                            	<p class="quote separator-line">
+                        	    	热爱  &&  坚持
+                            	</p>
+                            	<!-- end quote -->
+                        
+                            	<p class="mrg-top-sm">
+                        	    	我喜欢这样的生活，不服输，不放弃，不自怜，不妄自菲薄。踏实而沉稳地，一步一步向前走。未来的路虽然遥远，但是它已经在我们的脚下。
+                            	</p>
+                        
+                            	<p class="mrg-top-sm">
+                        	    	带着热爱，带着坚持，带着汗水，带着笑容，带着眼泪，也带着欢欣，一切都是命运最好的安排，一切都是生命中最美好的时光。
+                            	</p>
+                        	</div>
+                        	<!-- end company description -->
+                    	</div>                    	
+                	</div>
+                	<!-- end content -->
+            	</section>
+            <!-- end about section -->
+            <!-- service section -->
+            <section class="works-section">
+        	    	<!-- section background -->
+        	    	<div class="bg-container-static"></div>
+                	<!-- end section background -->
+                	<!-- content -->                	
+            	    	<div class="content col-md-8 col-md-offset-2 col-sm-12 col-sm-rlt col-xs-12 no-pad centering-y">
+                	    	<div class="carousel-col">
+                    	    	<!-- service 1 -->
+                    	    	<div class="service col-md-4">
+                    		    	<!-- icon container -->
+                        	    	<div class="icon-container">
+                        		    	<i class="fa fa-css3"></i>
+                        	    	</div>
+                        	    	<!-- end icon container -->
+                        
+                        	    	<!-- text container -->
+                        	    	<div class="text-container">
+                        		    	<h6>WEB DESIGN</h6>
+                        	        	<p class="mrg-top-xs">Python后端开发，了解Django和Flask框架，了解HTML，CSS, JS基本知识。能够利用Django独立开发网站并熟悉常见的网络安全问题</p>
+                                        <p>个人作品：<a href="http://zhangtao1993.top" target="_blank" style="color: #398439">http://zhangtao1993.top</a></p>
+                                        <p>github：<a href="https://github.com/tyrionzt/MiddleRiver" target="_blank" style="color: #398439"> https://github.com/tyrionzt/MiddleRiver</a></p>
+                        	    	</div>
+                        	    	<!-- end text container -->
+                    	    	</div>
+                    	    	<!-- end service 1 -->
+                        
+                            	<!-- service 2 -->
+                    	    	<div class="service col-md-4">
+                    		    	<!-- icon container -->
+                        	    	<div class="icon-container">
+                        		    	<i class="fa fa-pencil"></i>
+                        	    	</div>
+                        	    	<!-- end icon container -->
+                        
+                        	    	<!-- text container -->
+                        	    	<div class="text-container">
+                        		    	<h6>SQL & NOSQL</h6>
+                        	        	<p class="mrg-top-xs">熟悉常见数据库的基本操作，熟悉MySQL的基本使用和调优，项目开发中运用redis作中间件</p>
+                        	    	</div>
+                        	    	<!-- end text container -->
+                    	    	</div>
+                    	    	<!-- end service 2 -->
+                        
+                            	<!-- service 3 -->
+                    	    	<div class="service col-md-4">
+                    		    	<!-- icon container -->
+                        	    	<div class="icon-container">
+                        		    	<i class="fa fa-gear"></i>
+                        	    	</div>
+                        	    	<!-- end icon container -->                        
+                        	    	<!-- text container -->
+                        	    	<div class="text-container">
+                        		    	<h6>Liunx & 其它</h6>
+                        	        	<p class="mrg-top-xs">熟悉Linux常用命令，能在liunx下进行开发。熟悉多线程和多进程</p>
+                                        <p>其它技术：docker、genkins、Git...</p>
+                        	    	</div>
+                        	    	<!-- end text container -->
+                    	    	</div>
+                    	    	<!-- end service 3 -->
+                        	</div>
+                    	</div>
+                	
+                	<!-- end content -->
+            	</section>
+            <!-- end works section -->
+            <!-- contact section -->
+            <section class="contact-section">
+        	    	<!-- section background -->
+        	    	<div class="bg-container-static"></div>
+                	<!-- end section background -->
+                	<!-- content -->
+                	<div class="content col-md-10 col-md-offset-1 col-sm-12 col-xs-12 no-pad centering-y col-sm-rlt">
+            	    	<!-- details -->
+                    	<div class="col-md-4 col-sm-12">
+                	    	<!-- office -->
+                        	<div class="details">
+                    	    	<h5>WECHAT & QQ</h5>
+                            	<p>zt931675058 <br />931675058</p>
+                        	</div>
+                        	<!-- end office -->
+                    
+                        	<!-- phone -->
+                        	<div class="details">
+                    	    	<h5>电话</h5>
+                            	<p>16620810445</p>
+                        	</div>
+                        	<!-- end phone -->
+                    
+                        	<!-- email -->
+                        	<div class="details">
+                    	    	<h5>地址</h5>
+                            	<p>四川中江<br />太和绿洲</p>
+                        	</div>
+                        	<!-- end email -->
+                    
+                        	<!-- social media -->
+                        	<div class="details">
+                    	    	<h5>stay connected</h5>
+                        
+                            	<!-- social media container -->
+                            	<div class="social-media-container">
+            				    	<a class="social-media" href="https://www.qq.com/" target="_blank"><i class="fa fa-qq"></i></a>
+                        	    	<a class="social-media" href="https://weixin.qq.com/" target="_blank"><i class="fa fa-wechat"></i></a>
+                        	    	<a class="social-media" href="https://github.com/" target="_blank"><i class="fa fa-github"></i></a>
+                            	</div>
+                            	<!-- end social media container -->
+                        	</div>
+                        	<!-- end social media -->
+                    	</div>
+                    	<!-- end details -->
+                
+                    	<!-- contact form container -->
+                    	<div class="contact-form-container col-md-8 col-sm-12 col-xs-12">
+                	    	<h5>留言</h5>
+					    	<form class="contact-form" action="/resume/save_message/" method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+						    	<!-- left side -->
+						    	<div class="col-md-6 col-sm-12 no-pad">
+							    	<div class="input-container">
+								    	<input type="text" id="name" name="name" />
+								    	<label for="name">姓名</label>
+                        	        
+								    	<div class="input-border-bottom"></div>
+							    	</div>
+						    	</div>
+						    	<!-- end left side -->
+                            
+						    	<!-- right side -->
+						    	<div class="col-md-6 col-sm-12 no-pad">
+							    	<div class="input-container">
+								    	<input type="email" id="email" name="email" />
+								    	<label for="email">邮件</label>
+                	    		            
+								    	<div class="input-border-bottom"></div>
+							    	</div>
+						    	</div>
+						    	<!-- end right side -->
+                    	                        
+						    	<!-- full width -->
+						    	<div class="col-xs-12 text-center no-pad">                            
+							    	<div class="input-container no-mrg">
+								    	<textarea id="message" name="message"></textarea>
+								    	<label for="message">留言区</label>
+                                
+								    	<div class="input-border-bottom"></div>
+							    	</div>
+                                
+							    	<!-- notification container -->
+							    	<div class="col-xs-12 notif-container no-pad">
+								    	<div class="form-notif"></div>
+							    	</div>
+							    	<!-- end notification container -->
+                        	
+							    	<!-- button container -->
+							    	<div class="col-xs-12 no-pad text-left mrg-top-xs">
+								    	<button type="submit" class="button button-green button-small">发送</button>
+							    	</div>
+							    	<!-- end button container -->
+						    	</div>
+						    	<!-- end full width -->
+					    	</form>
+                            <div class="col-xs-12 no-pad text-center mrg-top-xs">
+                                        <a href="/resume/show_message/" target="_blank"><button class="button button-red button-small">查看留言</button></a>
+                                    </div>
+                    	</div>
+                    	<!-- end contact form container -->
+                	</div>
+                	<!-- end content -->
+            	</section>
+            <!-- end contact section -->
+        </div>
+        <!-- end section container -->
+    </div>
+    <!-- end page container -->
+    <!-- javascript import -->
+    <!-- jquery -->
+    <script type="text/javascript" src="../../static/js/jquery.js"></script>
+    <!-- bootstrap -->
+    <script type="text/javascript" src="../../static/js/bootstrap.min.js"></script>
+    <!-- other plugins -->
+    <script type="text/javascript" src="../../static/js/plugins.min.js"></script>
+    <!-- google map -->
+    <!-- main js -->
+    <script type="text/javascript" src="../../static/js/main_slideshow.js"></script>
+</body>
+</html>

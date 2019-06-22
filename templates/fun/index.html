@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fun</title>
+    <link rel="shortcut" href="{% static 'fun/imgs/icon.jpg' %}">
+    <link rel="stylesheet" href="{% static 'fun/css/index.css' %}" type="text/css" >
+</head>
+<body>
+    <div id='head'>
+        <h1>MY WORKS</h1>
+    </div>
+
+    <div id="content">  <!--// 主内容：分为页面左右两个部分展示 -->
+        <div id="left">
+            <b><img src="{% static 'fun/imgs/eatsnake.png' %}" width="500" height="500" alt="testimg"></b>
+            <br>
+            贪吃蛇，经典游戏，纯Python编写，源代码见此<a href="show_rcode/?name=eatsnake" target="_blank">  源码  </a> <br>
+            <a href="download/?name=eatsnake">下载试玩</a>（目前只支持Windows）<br>
+            <a href="/" target="_blank"> 建议 </a>（在CONTACT ME中填写留言）<br>
+            <hr>
+        </div>
+        <div id="mid"></div>
+        <div id="right">
+            <p1>敬请期待</p1>
+            <hr>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="left">
+            <p1>敬请期待</p1>
+        </div>
+        <div id="right">
+            <p1>敬请期待</p1>
+        </div>
+    </div>
+</body>
+</html>
