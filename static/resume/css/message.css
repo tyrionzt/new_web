@@ -1,0 +1,36 @@
+
+.danger {
+    background: #00e4b6;
+    width: 100%;
+}
+
+.table {
+    background: #00e4b6;
+    text-align: center;
+    border: 10px black;
+    width: 100%;
+}
+
+#lm {
+    text-align: center;
+    float: right;
+}
+
+.warn {
+    font-size: medium;
+    text-align: left;
+    background: red;
+}
+
+.active {
+    background: #2a6496;
+}
+.success {
+    background: yellow;
+}
+.warning {
+    background: #398439;
+}
+.info {
+    background: #1da1f2;
+}

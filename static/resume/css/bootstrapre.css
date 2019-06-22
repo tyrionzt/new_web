@@ -6754,4 +6754,9 @@ button.close {
     display: none !important;
   }
 }
+
+
+.danger {
+    background: #00e4b6;
+}
 /*# sourceMappingURL=bootstrap.css.map */
