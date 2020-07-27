@@ -3,12 +3,16 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.conf import settings
-from django.http import FileResponse,HttpResponseRedirect
+from django.http import FileResponse, HttpResponseRedirect
 from .models import Message
+from django.core.paginator import Paginator
+
 
 # Create your views here.
 def index(request):
+    motto = ""
     return render(request, 'resume/resume.html')
+
 
 def download_resuem(request):
     file = open(settings.BASE_DIR + '/resume.pdf', 'rb')
@@ -18,11 +22,14 @@ def download_resuem(request):
     response['Content-Disposition'] = 'attachment;filename="resume.pdf"'
     return response
 
+
 def qq(request):
     return render(request, 'resume/qq.html')
 
+
 def wechat(request):
     return render(request, 'resume/wechat.html')
+
 
 def save_message(request):
     name = request.POST.get('name')
@@ -38,6 +45,11 @@ def save_message(request):
 
     return HttpResponseRedirect('/')
 
+
 def show_message(request):
-    messages = Message.objects.all()
-    return render(request, 'resume/message.html', {'messages': messages})
+    messages = Message.objects.all().order_by("-id")
+    paginator = Paginator(messages, 5)
+    pindex = request.GET.get("pindex", "")
+    pindex = 1 if pindex == "" else int(pindex)
+    page = paginator.page(pindex)
+    return render(request, 'resume/message.html', {'messages': messages, 'page': page})

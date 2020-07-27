@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function repeat() {
+            $('#modal_volume').fadeIn();
+        }
+    </script>
+    <style>
+        div {
+      display: -moz-box;/*兼容Firefox*/
+      display: -webkit-box;/*兼容FSafari、Chrome*/
+
+      -moz-box-align: center;/*兼容Firefox*/
+      -webkit-box-align: center;/*兼容FSafari、Chrome */
+
+      -moz-box-pack: center;/*兼容Firefox*/
+      -webkit-box-pack: center;/*兼容FSafari、Chrome */
+
+      width: 300px;
+      height: 200px;
+      background-color: pink;
+}
+    </style>
+</head>
+<body>
+
+<a href="javascript:;" onclick="repeat()">
+
+<div id="modal_volume" style="position: fixed; text-align: center; width: 100%; height: 100%; top: 0; z-index: 9999; display: none;">
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <td align="center" style="">
+                    <div style="width: 900px; position: relative">
+                        <a href="zjb_enroll?course=专业课提高班">
+                           <img src="Content/images/tanchuang.jpg" />asdasd</a>
+                        <a href="javascript:$('#modal_volume').fadeOut();" style="display: block; width: 45px; height: 45px; position: absolute; right: 11px; top: 10px; z-index: 2">asdad</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+</div>
+</body>
+</html>

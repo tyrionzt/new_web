@@ -1,4 +1,6 @@
-
+body {
+    overflow: auto;
+}
 .danger {
     background: #00e4b6;
     width: 100%;
@@ -17,9 +19,8 @@
 }
 
 .warn {
-    font-size: medium;
+    font-size: 10px;
     text-align: left;
-    background: red;
 }
 
 .active {
@@ -33,4 +34,23 @@
 }
 .info {
     background: #1da1f2;
+}
+
+
+.pagination-main {
+    background:url("../image/messages.jpg")no-repeat;
+    width:100%;
+    height:100%;
+    background-size:100% 100%;
+    position:absolute;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg-login.png',sizingMethod='scale');
+}
+
+.pagination {
+    margin-top: 20%;
+    margin-left: 40%;
+}
+
+.pagination-main .pagination li a {
+    color: #0a0a0a;
 }

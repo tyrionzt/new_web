@@ -5,15 +5,18 @@ from django.shortcuts import render
 from django.http import FileResponse
 from django.conf import settings
 
+
 # Create your views here.
 def index(request):
     return render(request, 'fun/index.html')
+
 
 def show_rcode(request):
     name = request.GET.get('name')
     html = 'fun/' + name + '.html'
     print html
     return render(request, html)
+
 
 def download_game(request):
     name = request.GET.get('name')

@@ -1,10 +1,30 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>个人喜好</title>
+    <title>学习笔记</title>
+    <style type="text/css">
+        {#body{background: url("{% static 'img/background/sample8.jpg' %}");opacity: 0.5; position: absolute;background-repeat: no-repeat;background-size: 100%;z-index: -1}#}
+        {#.journal-content{ width:100%;height: 200%;background: url("{% static 'img/background/sample8.jpg' %}");opacity: 0.2; position: absolute;background-repeat: no-repeat;background-size: 100%;}#}
+        .journal-content a{ width:100%; height:130px; line-height:30px; border-bottom:1px dotted #999; text-decoration:none; display:block;opacity: 1}
+        .journal-content a:hover{ background:#ccc} a:link{color: black;opacity: 1}
+        .journal-content a strong{ height:30px; width:100%; float: left; overflow:hidden;text-overflow: ellipsis;-o-text-overflow: ellipsis;white-space:nowrap;
+            opacity: 1;}
+        .journal-content a p{ height:30px; width:100%; float: left; overflow:hidden;text-overflow: ellipsis;-o-text-overflow: ellipsis;white-space:nowrap;opacity: 1}
+        .journal-content a span{ height:30px; width:350px; float: right;
+            opacity: 1;}
+    </style>
 </head>
 <body>
-    <p>欢迎来到我的个人中心！！！</p>
+<div class="journal-content">
+{% for content in contents %}
+<a href="/private/detail/?id={{ content.id }}">
+        <strong>{{ content.title }}</strong>
+        <p>{{ content.describe }}</p>
+        <span>{{ content.author }}&nbsp;记录于&nbsp;&nbsp;{{ content.create_time }}</span>
+</a>
+{% endfor %}
+</div>
 </body>
 </html>

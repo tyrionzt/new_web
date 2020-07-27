@@ -28,6 +28,6 @@ urlpatterns = [
 
     url(r'^save_message/$', views.save_message),
 
-    url(r'^show_message/$', views.show_message),
+    url(r'show_message/', views.show_message),
 
 ]

@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="{% static 'resume/css/message.css' %}">
 </head>
 <body>
-    <div class="warn"> <h1>若需删除留言，请<a href="/resume" target="_blank">联系本人</a> </h1></div>
+    <div class="warn"> <h1>若需删除留言，请联系本人：16620810445 </h1>
+    <a href="/"> 去留言 </a></div>
+    <div class="messages">
      <table class="table">
             <thead>
                 <tr class="danger">
@@ -33,8 +35,28 @@
             </tbody>
         </table>
      <hr>
-        <div id="lm"><a href="/"> 去留言 </a></div>
+    </div>
+		<div class="pagination-main">
+			<ul class="pagination">
+			{% if page.has_previous %}
+				<li><a href="/resume/show_message/?pindex={{page.previous_page_number}}" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span></a></li>
+            {% endif %}
 
+            {% for num in page.paginator.page_range%}
+            	{%if pindex == page.number%}
+                	<li><a href="">{{ num }}</a></li>
+                {%else%}
+                    <li><a href="/resume/show_message/?pindex={{num}}">{{ num }}</a></li>
+                {%endif%}
+             {% endfor %}
+
+             {% if page.has_next %}
+                 <li><a href="/resume/show_message/?pindex={{page.next_page_number}}" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span></a></li>
+              {% endif %}
+       		</ul>
+		</div>
 
 </body>
 </html>

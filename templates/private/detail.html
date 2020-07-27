@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ contents.title }}</title>
+</head>
+<body>
+    <strong>{{ contents.title }}</strong>
+        <p>{{ contents.describe }}</p>
+        <span>{{ contents.author }}&nbsp;记录于&nbsp;&nbsp;{{ contents.create_time }}</span>
+<form action="/private/update/" method="post">
+    <input type="hidden" name="id" value="{{ contents.id }}">
+    <button type="submit">更新</button>
+</form>
+<form action="/private/delete/" method="post">
+    <input type="hidden" name="id" value="{{ contents.id }}">
+    <button type="submit">删除</button>
+</form>
+</body>
+</html>
