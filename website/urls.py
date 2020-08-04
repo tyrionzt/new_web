@@ -24,6 +24,8 @@ urlpatterns = [
 
     url(r'^$', views.index),
 
+    url(r'^index_love/$', views.index_love, name="love"),
+
     url(r'^resume/', include('resume.urls')),
 
     url(r'^gallery/', include('gallery.urls')),

@@ -10,8 +10,8 @@ from django.core.paginator import Paginator
 
 # Create your views here.
 def index(request):
-    motto = ""
-    return render(request, 'resume/resume.html')
+    motto = "把每天都当作是你生命中的最后一天来过,总有一天,你会轻松自在的。"
+    return render(request, 'resume/resume.html', {"motto": motto})
 
 
 def download_resuem(request):

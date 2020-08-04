@@ -1,0 +1,50 @@
+﻿{% load static %}
+{% load judgeodd %}
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<title>我的相册</title>
+
+<link rel="stylesheet" href="{% static 'gallery/css/reset.css' %}">
+<link rel="stylesheet" href="{% static 'gallery/css/style.css' %}">
+
+</head>
+
+<body>
+<audio id="audio_id" controls autoplay loop src="{% static 'longmao.mp3' %}"></audio>
+<div class="container">
+    {% for item in object_list %}
+        <p style="text-align: center;color: #FFFFFF">{{ item.name }}</p>
+    {% if forloop.counter|judge_odd %}
+  <div class="card-container-{{ forloop.counter }}">
+    {% for photo in item.photo_set.all %}
+        <div class="card">
+          <img src="{{ photo.image.url }}" height="400px" width="600px"/>
+        </div>
+          {% endfor %}
+  </div>
+  {% else %}
+        <div class="card-container-{{ forloop.counter }}">
+        <div class="controller left"></div>
+        <div class="controller right"></div>
+        <div class="card-holder">
+        {% for photo in item.photo_set.all %}
+            <div class="card">
+                <img src="{{ photo.image.url }}" height="400px" width="600px"/>
+            </div>
+        {% endfor %}
+    </div>
+  </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<script src="{% static 'gallery/js/jquery.min.js' %}"></script>
+<script src="{% static 'gallery/js/index.js' %}"></script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';color:#ffffff">
+</div>
+</body>
+</html>
+

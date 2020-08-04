@@ -8,7 +8,8 @@ from django.utils.encoding import python_2_unicode_compatible
 
 # Create your models here.
 
-@python_2_unicode_compatible # 解决django后台不能写入中文到数据库的问题
+
+@python_2_unicode_compatible  # 解决django后台不能写入中文到数据库的问题
 class Item(models.Model):
     name = models.CharField(max_length=249)
     desc = models.TextField()
@@ -23,19 +24,18 @@ class Item(models.Model):
     def get_absolute_url(self):
         return ('item_detail', None, {'pk': self.id})
 
+
 @python_2_unicode_compatible
 class Photo(models.Model):
     item = models.ForeignKey(Item)
-    title = models.CharField(max_length=100)
     image = ThumbnailImageField(upload_to='photos')
     caption = models.CharField(max_length=249, blank=True)
 
-    class Meta:
-        ordering = ['title']
-
     def __str__(self):
-        return self.title
+        return self.caption
 
     @permalink
     def get_absolute_url(self):
         return ('photo_detail', None, {'pk': self.id})
+
+

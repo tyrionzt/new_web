@@ -16,3 +16,7 @@ def index(request):
 
     context = {"pretentious": pretentious, "faith": faith, "insist": insist, "skills": skills}
     return render(request, 'index/index.html', context)
+
+
+def index_love(request):
+    return render(request, 'index/index_love.html')

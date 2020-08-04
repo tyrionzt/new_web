@@ -6,15 +6,15 @@
 </head>
 <body>
     <strong>{{ contents.title }}</strong>
-        <p>{{ contents.describe }}</p>
+        <pre>{{ contents.describe }}</pre>
         <span>{{ contents.author }}&nbsp;记录于&nbsp;&nbsp;{{ contents.create_time }}</span>
 <form action="/private/update/" method="post">
     <input type="hidden" name="id" value="{{ contents.id }}">
-    <button type="submit">更新</button>
+    <button type="submit">点赞</button>
 </form>
 <form action="/private/delete/" method="post">
     <input type="hidden" name="id" value="{{ contents.id }}">
-    <button type="submit">删除</button>
+    <button type="submit">评论</button>
 </form>
 </body>
 </html>

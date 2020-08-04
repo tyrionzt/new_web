@@ -20,26 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbf6e65e-8bb2-403e-ab22-32490f8ece71" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fun/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/fun/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/private/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/private/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/private/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/private/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/private/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/private/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/private/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/private/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/resume/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/resume/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/resume/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resume/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/resume/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/resume/css/message.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/resume/css/message.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fun/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/fun/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/gallery/gallery_item_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gallery/gallery_item_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/gallery/gallery_item_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gallery/gallery_item_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/private/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/private/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/resume/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/resume/message.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/private/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/private/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/resume/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/resume/resume.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/test.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/website/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,23 +53,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>css</find>
-      <find>dash days_dash</find>
-      <find>dash</find>
-      <find>text-align</find>
-      <find>wordsrotator</find>
-      <find>countdown</find>
-      <find>img-logo</find>
-      <find>coun</find>
-      <find>contact-form</find>
-      <find>col-xs-12</find>
-      <find>hank you for contacting us. We will reply you shortly.</find>
-      <find>table</find>
-      <find>danger</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -90,18 +68,18 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/resume/image" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/img" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/resume/image" />
       <recent name="$PROJECT_DIR$/static/img" />
-      <recent name="E:\website\static\fun\imgs" />
-      <recent name="E:\website\media\games" />
-      <recent name="C:\Users\Administrator\website\static\fun" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/media/audio" />
+      <recent name="$PROJECT_DIR$/gallery" />
+      <recent name="$PROJECT_DIR$/templates/gallery" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\website\static\fun\imgs" />
@@ -187,7 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1560512376599</updated>
       <workItem from="1591925961112" duration="8039000" />
-      <workItem from="1592981259094" duration="32287000" />
+      <workItem from="1592981259094" duration="66674000" />
     </task>
     <servers />
   </component>
@@ -227,11 +205,16 @@
       <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="1358" height="210" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1595643580374" />
-    <state x="159" y="123" key="SettingsEditor" timestamp="1591943825826">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="159" y="123" key="SettingsEditor" timestamp="1595844911627">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="159" y="123" key="SettingsEditor/0.23.1440.822@0.23.1440.822" timestamp="1591926059572" />
+    <state x="159" y="123" key="SettingsEditor/0.23.1440.823@0.23.1440.823" timestamp="1595844911627" />
     <state x="159" y="123" key="SettingsEditor/0.23.1440.825@0.23.1440.825" timestamp="1591943825826" />
+    <state x="450" y="353" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1595990484107">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="450" y="353" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.23.1440.825@0.23.1440.825" timestamp="1595990484106" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
