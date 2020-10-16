@@ -4,31 +4,21 @@ from __future__ import unicode_literals
 from django.shortcuts import render, HttpResponseRedirect
 from .models import Journal
 from django.db.models import Q
+from django.core.paginator import Paginator
 
 # Create your views here.
 
 
 def index(request):
-    contents = Journal.objects.all().order_by("-id")
-    context = {"contents": contents}
-    return render(request, 'private/index.html', context)
+    pindex = request.GET.get("page", "")
+    essay_type = request.GET.get("type", "技术笔记")
+    pindex = 1 if pindex == "" else int(pindex)
 
-
-def create_journal(request):
-    title, describe, author = request.POST.get("title"), request.POST.get("describe"), request.POST.get("author")
-    journal = Journal()
-    journal.title, journal.describe, journal.author = title, describe, author
-    journal.save()
-    return HttpResponseRedirect('/private')
-
-
-def update_journal(request):
-    return create_journal(request)
-
-
-def delete_journal(request):
-    Journal.objects.filter(id=request.POST.get("id")).delete()
-    return HttpResponseRedirect('/private')
+    contents = Journal.objects.filter(type=essay_type).order_by("-id")
+    pages = len(contents) // 5 if len(contents) % 5 == 0 else len(contents) // 5 + 1
+    show_contents = contents[(pindex * 5 - 5):(pindex * 5)]
+    context = {"contents": show_contents, "page": pindex, "essay": essay_type, "pages": pages}
+    return render(request, "private/index.html", context)
 
 
 def query_journal(request):
@@ -44,3 +34,7 @@ def detail_journal(request):
     contents = Journal.objects.get(id=jou_id)
     context = {"contents": contents}
     return render(request, 'private/detail.html', context)
+
+
+def like_journal(request):
+    pass

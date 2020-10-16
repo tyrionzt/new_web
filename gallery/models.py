@@ -13,6 +13,8 @@ from django.utils.encoding import python_2_unicode_compatible
 class Item(models.Model):
     name = models.CharField(max_length=249)
     desc = models.TextField()
+    create_time = models.DateTimeField(auto_now=True)
+    location = models.CharField(max_length=100)
 
     class Meta:
         ordering = ['name']
@@ -37,5 +39,3 @@ class Photo(models.Model):
     @permalink
     def get_absolute_url(self):
         return ('photo_detail', None, {'pk': self.id})
-
-

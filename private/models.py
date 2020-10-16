@@ -8,12 +8,13 @@ from django.db import models
 
 class Journal(models.Model):
     title = models.CharField(max_length=100)
-    describe = models.TextField()
+    type = models.CharField(max_length=100)
     create_time = models.DateTimeField(auto_now_add=True)
     update_time = models.DateTimeField(auto_now=True)
     author = models.CharField(max_length=20, default="tyrion")
+    contents = models.TextField()
 
-    def __str__(self):
+    def __unicode__(self):
         return "%s" % self.title
 
 

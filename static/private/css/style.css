@@ -1,0 +1,51 @@
+body {
+    background:url(../../img/background/sample8.jpg) no-repeat;
+	background-size:cover;
+	background-position:50% 50%;
+}
+.journal-content {
+    width: 70%;
+    float: right;
+    background: white;
+    margin-right: 5%;
+}
+
+.pagination-main {
+    width: 20%;
+    background: gray;
+}
+
+.journal-content a{ width:100%;
+    height:130px;
+    line-height:30px;
+    border-bottom:1px dotted #999;
+    text-decoration:none;
+    display:block;opacity: 1}
+
+.journal-content a:hover{ background:#ccc} a:link{color: black;opacity: 1}
+
+.journal-content a strong{ height:30px;
+    width:100%;
+    float: left;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space:nowrap;
+    opacity: 1;}
+.journal-content a p{ height:30px;
+    width:100%;
+    float: left;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space:nowrap;
+    opacity: 1}
+.journal-content a span{ height:30px;
+    width:350px;
+    float: right;
+    opacity: 1;}
+.search {
+    text-align: center;
+}
+
+.pagination-main a:hover{ background:#ccc} a:link{color: black;}

@@ -15,8 +15,7 @@ def index(request):
 
 
 def download_resuem(request):
-    file = open(settings.BASE_DIR + '/resume.pdf', 'rb')
-    # return HttpResponse("it's ok")
+    file = open(settings.BASE_DIR + '/media/resume.pdf', 'rb')
     response = FileResponse(file)
     response['Content-Type'] = 'application/octet-stream'
     response['Content-Disposition'] = 'attachment;filename="resume.pdf"'

@@ -26,11 +26,13 @@ urlpatterns = [
 
     url(r'^index_love/$', views.index_love, name="love"),
 
+    url(r'^download/$', views.download, name="download"),
+
     url(r'^resume/', include('resume.urls')),
 
-    url(r'^gallery/', include('gallery.urls')),
+    url(r'^gallery/', include('gallery.urls', "gallery")),
 
     url(r'^fun/', include('fun.urls')),
 
-    url(r'^private/', include('private.urls'))
+    url(r'^private/', include('private.urls', "private"))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

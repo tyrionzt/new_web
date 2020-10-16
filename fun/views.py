@@ -14,7 +14,6 @@ def index(request):
 def show_rcode(request):
     name = request.GET.get('name')
     html = 'fun/' + name + '.html'
-    print html
     return render(request, html)
 
 

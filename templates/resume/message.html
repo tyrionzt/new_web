@@ -7,56 +7,20 @@
     <link rel="stylesheet" href="{% static 'resume/css/message.css' %}">
 </head>
 <body>
-    <div class="warn"> <h1>若需删除留言，请联系本人：16620810445 </h1>
-    <a href="/"> 去留言 </a></div>
-    <div class="messages">
-     <table class="table">
-            <thead>
-                <tr class="danger">
-                    <th>留言时间</th>
-                    <th>留言者</th>
-                    <th>内容</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% if messages %}
-                    {% for message in messages %}
-                        <tr class="{% cycle 'active' 'success' 'warning' 'info' %}">
-                            <td>{{ message.date|date:'Y-m-d H:i:s' }}</td>
-                            <td>{{ message.name }}</td>
-                            <td>{{ message.contents }}</td>
-                        </tr>
-                    {% endfor %}
-                {% else %}
-                    <tr>
-                        <td colspan="4">无数据</td>
-                    </tr>
-                {% endif %}
-            </tbody>
-        </table>
-     <hr>
-    </div>
-		<div class="pagination-main">
-			<ul class="pagination">
-			{% if page.has_previous %}
-				<li><a href="/resume/show_message/?pindex={{page.previous_page_number}}" aria-label="Previous">
-					<span aria-hidden="true">&laquo;</span></a></li>
-            {% endif %}
-
-            {% for num in page.paginator.page_range%}
-            	{%if pindex == page.number%}
-                	<li><a href="">{{ num }}</a></li>
-                {%else%}
-                    <li><a href="/resume/show_message/?pindex={{num}}">{{ num }}</a></li>
-                {%endif%}
-             {% endfor %}
-
-             {% if page.has_next %}
-                 <li><a href="/resume/show_message/?pindex={{page.next_page_number}}" aria-label="Next">
-                      <span aria-hidden="true">&raquo;</span></a></li>
-              {% endif %}
-       		</ul>
+<div class="wrapper" id="home">
+	<h1>欢迎光临留言板<br /><span>如果需要删除留言，请联系本人：16620810445</span><br /><a href="/"> 去留言 </a></h1>
+    {% for message in messages %}
+	<div class="ds-post-main">
+		<div class="ds-avatar">
+			<a title="设计达人" href="http://www.shejidaren.com" target="_blank"><img alt="设计达人" src="{% static 'resume/image/sign.jpg' %}"></a>
 		</div>
-
+		<div class="ds-comment-body">
+			{{ message.name }}&nbsp;&nbsp;&nbsp;&nbsp;{{ message.date }}
+			<p>"{{ message.contents}}</p>
+		</div>
+	</div>
+    {% endfor %}
+    <a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</div>
 </body>
 </html>

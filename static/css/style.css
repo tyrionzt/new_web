@@ -378,7 +378,7 @@ a.link-1.active::before
 /*-- button color - red --*/
 .button-red{
 	color:black;
-	background:#d8283e;
+	background:#a7c14a;
 }
 .button-red::before{
 	background:green;

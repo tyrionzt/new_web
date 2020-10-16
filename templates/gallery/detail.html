@@ -1,0 +1,42 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{{ item.name }}</title>
+	<script type="text/javascript" src="{% static 'gallery/js/mootools-for-gallery.js' %}"> </script>
+	<script type="text/javascript" src="{% static 'gallery/js/UvumiGallery-compressed.js' %}"> </script>
+	<link rel="stylesheet" type="text/css" media="screen" href="{% static 'gallery/css/uvumi-gallery.css' %}" />
+	<style type="text/css">
+		body,html{
+			background-color:#333;
+			margin:0;
+			padding:0;
+			font-family:Trebuchet MS, Helvetica, sans-serif; color:#FFFFFF
+		}a{ color:#FFCC00}
+
+		#gallery{
+			margin:20px auto;
+			height:500px;
+			width:860px;
+			position:relative;
+			color:#aaa;
+			padding:20px;
+			overflow:hidden;
+			border:1px solid #888;
+			background-color:#000;
+		}
+	</style>
+	<script type="text/javascript">
+		new UvumiGallery({container:'gallery'});
+	</script>
+</head>
+<body>
+	<div id="gallery">
+        {% for photo in contents %}
+		<a href="{{ photo.image.url }}">
+		<img src="{{ photo.image.url }}"/></a>
+        {% endfor %}
+	</div>
+
+</body>
+</html>

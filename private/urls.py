@@ -3,12 +3,12 @@ from . import views
 
 urlpatterns = [
 
-    url(r'^$', views.index),
+    url(r'^$', views.index, name="index"),
 
     url(r'detail/', views.detail_journal, name="detail"),
 
-    url(r'update/', views.update_journal, name="update"),
+    url(r'query/', views.query_journal, name="query"),
 
-    url(r'delete/', views.delete_journal, name="delete"),
+    url(r'like/', views.like_journal, name="like"),
 
 ]

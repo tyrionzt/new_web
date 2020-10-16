@@ -3,28 +3,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>学习笔记</title>
-    <style type="text/css">
-        {#body{background: url("{% static 'img/background/sample8.jpg' %}");opacity: 0.5; position: absolute;background-repeat: no-repeat;background-size: 100%;z-index: -1}#}
-        {#.journal-content{ width:100%;height: 200%;background: url("{% static 'img/background/sample8.jpg' %}");opacity: 0.2; position: absolute;background-repeat: no-repeat;background-size: 100%;}#}
-        .journal-content a{ width:100%; height:130px; line-height:30px; border-bottom:1px dotted #999; text-decoration:none; display:block;opacity: 1}
-        .journal-content a:hover{ background:#ccc} a:link{color: black;opacity: 1}
-        .journal-content a strong{ height:30px; width:100%; float: left; overflow:hidden;text-overflow: ellipsis;-o-text-overflow: ellipsis;white-space:nowrap;
-            opacity: 1;}
-        .journal-content a p{ height:30px; width:100%; float: left; overflow:hidden;text-overflow: ellipsis;-o-text-overflow: ellipsis;white-space:nowrap;opacity: 1}
-        .journal-content a span{ height:30px; width:350px; float: right;
-            opacity: 1;}
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>个人笔记</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'private/css/layui.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'private/css/main.css' %}">
+    <!--加载meta IE兼容文件-->
+    <!--[if lt IE 9]>
+{#<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>#}
+<script src="{% static 'private/js/shiv.js' %}"></script>
+{#<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>#}
+<script src="{% static 'private/js/min.js' %}"></script>
+<![endif]-->
 </head>
 <body>
-<div class="journal-content">
-{% for content in contents %}
-<a href="/private/detail/?id={{ content.id }}">
-        <strong>{{ content.title }}</strong>
-        <p>{{ content.describe }}</p>
-        <span>{{ content.author }}&nbsp;记录于&nbsp;&nbsp;{{ content.create_time }}</span>
-</a>
-{% endfor %}
-</div>
+<div class="content">
+    <div class="cont w1000">
+        <div class="title">
+        <span class="layui-breadcrumb" lay-separator="|" style="visibility: visible;">
+          <a href="{% url 'private:index' %}?type=技术笔记" >技术笔记</a><span lay-separator="">|</span>
+          <a href="{% url 'private:index' %}?type=个人日志" >个人日志</a><span lay-separator="">|</span>
+          <a href="{% url 'private:index' %}?type=旅游杂记" >旅游杂记</a>
+        </span>
+        </div>
+        <div class="list-item">
+            {% if not contents %}
+                <div class="item">
+                <div class="layui-fluid">
+                    <div class="layui-row">
+                        <div class="layui-col-xs12 layui-col-sm8 layui-col-md7">
+                            <div class="item-cont">
+                                无 {{ essay }} 相关文章
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            {% for content in contents %}
+            <div class="item">
+                <div class="layui-fluid">
+                    <div class="layui-row">
+                        <div class="layui-col-xs12 layui-col-sm8 layui-col-md7">
+                            <div class="item-cont">
+                                <h3>{{ content.title }}
+                                    {% if status %}
+                                    <button class="layui-btn layui-btn-danger new-icon">new</button>
+                                    {% endif %}
+                                </h3>
+                                <h5>{{ content.type }}</h5>
+                                <p>{{ content.contents }}</p>
+                                <a href="{% url 'private:detail' %}?id={{ content.id }}" class="go-icon"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+    <div class="tablePage">
+        <a href="{% url 'private:index' %}" class="pageBtn" style="text-decoration: none">first</a>
+        {% if page == 1 %}
+            <a href="#" class="pageBtn" style="text-decoration: none">&#8249;</a>
+        {% else %}
+            <a href="{% url 'private:index' %}?page={{ page|add:-1 }}" class="pageBtn" style="text-decoration: none">&#8249;</a>
+        {% endif %}
+        {% if page == pages %}
+            <a href="#" class="pageBtn" style="text-decoration: none">&#8250;</a>
+        {% else %}
+            <a href="{% url 'private:index' %}?page={{ page|add:1}}" class="pageBtn" style="text-decoration: none">&#8250;</a>
+        {% endif %}
+        <a href="{% url 'private:index' %}?page={{ pages }}" class="pageBtn" style="text-decoration: none">last</a>
+    </div>
+    <script type="text/javascript" src="{% static 'private/js/layui.js' %}"></script>
+    <script>
+        $("document").ready(function(){
+             var aList = document.getElementsByTagName("a");
+             for (var i = 0, len = aList.length; i < len; i++) {
+             aList[i].removeAttribute("style");
+             }
+             this.style.color = "red"; //所要设置的颜色
+        });
+    </script>
+
 </body>
 </html>

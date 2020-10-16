@@ -1,5 +1,8 @@
 #! coding: utf-8
 from django.shortcuts import render
+from django.conf import settings
+from django.http import FileResponse, HttpResponse
+import os
 from resume.models import HomeIndex
 
 
@@ -20,3 +23,17 @@ def index(request):
 
 def index_love(request):
     return render(request, 'index/index_love.html')
+
+
+def download(request):
+    file_name = request.GET.get("name")
+    print type(file_name)
+    file_path = settings.BASE_DIR + '/media/' + file_name
+    print file_path
+    if not os.path.exists(file_path):
+        return HttpResponse("所需资源不存在～")
+    file = open(file_path, 'rb')
+    response = FileResponse(file)
+    response['Content-Type'] = 'application/octet-stream'
+    response['Content-Disposition'] = 'attachment;filename="%s"' % file_name
+    return response
