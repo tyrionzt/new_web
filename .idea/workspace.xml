@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbf6e65e-8bb2-403e-ab22-32490f8ece71" name="Default" comment="" />
+    <list default="true" id="fbf6e65e-8bb2-403e-ab22-32490f8ece71" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +74,7 @@
       <recent name="C:\Users\Administrator\website\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.tests">
+  <component name="RunManager">
     <configuration name="eatsnake.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/website/templates/fun/eatsnake.html">
       <method v="2" />
     </configuration>
@@ -123,19 +126,6 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Django Server.website" />
-      <item itemvalue="JavaScript Debug.eatsnake.html" />
-      <item itemvalue="JavaScript Debug.test.html" />
-      <item itemvalue="Python.tests" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.tests" />
-        <item itemvalue="JavaScript Debug.test.html" />
-        <item itemvalue="JavaScript Debug.eatsnake.html" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -198,19 +188,5 @@
       <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state x="450" y="353" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.23.1440.825@0.23.1440.825" timestamp="1595990484106" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/resume/admin.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/new_web$tests.coverage" NAME="tests Coverage Results" MODIFIED="1595408540419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fun" />
   </component>
 </project>
