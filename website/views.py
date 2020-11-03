@@ -5,8 +5,14 @@ from django.http import FileResponse, HttpResponse
 import os
 from resume.models import HomeIndex
 
-
 def index(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')  # 判断是否使用代理
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]  # 使用代理获取真实的ip
+    else:
+        ip = request.META.get('REMOTE_ADDR')  # 未使用代理获取IP
+    with open("ip.txt", "a+") as fp:
+        fp.write(ip+"\n")
     pretentious = "自知之明是最难得的知识。"
     faith = "生命中真正重要的不是你遭遇了什么,而是你记住了哪些事,又是如何铭记的  --《百年孤独》"
     insist = "生命的终结不是死亡，而是被遗忘  --《寻梦环游记》"

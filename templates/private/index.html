@@ -17,6 +17,26 @@
 </head>
 <body>
 <div class="content">
+    <div style="text-align: center">
+        <form action="{% url 'private:query' %}" method="post">
+            {% csrf_token %}
+                <div class="searchInput el-input" style="width: 244px; height: 34px;">
+                    <input type="hidden" name="type" value="{{ essay }}">
+                    <input type="hidden" name="page" value="{{ page }}">
+                    <input type="text" autocomplete="off" placeholder="输入关键字查询"
+                           class="el-input__inner" name="key" required>
+                    <button type="submit" class="search_submit">
+                        <img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjkxOTFEQzQ3RkExQjExRTk4MTAyRTA3QTEzRjFGNTAwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjkxOTFEQzQ4RkExQjExRTk4MTAyRTA3QTEzRjFGNTAwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTE5MURDNDVGQTFCMTFFOTgxMDJFMDdBMTNGMUY1MDAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OTE5MURDNDZGQTFCMTFFOTgxMDJFMDdBMTNGMUY1MDAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6MAx1jAAABKElEQVR42pzSyytEYRjH8UNnw9IsJBYuNbKxkIXrjoU/YVZWM6PYuGSUHUZhS7mOtf+BHbmUSDZKlLJUbFxK8n3rd+pxOp3ePPXpPZd5f/O8p6eqdPAdmOrBAobNs3usYTtIqGpzvYxT9GEH03r2hS1cozYeEGpdwSzmdG1rHv04xi1a4x10pmyO6kQbW9TNn4A9vKdsjupRRyugxgZ0Yzfwq1WtQ/GPeOUZ8Ky1PR5Q7xnQpPXFBrxi1DNgUOuRDZhCB7o8AiroxZMN2McNLpFN2ewmsYizpEl0I/yAO2xqGhvV2SQ+kde7UtIkfqAN6xjXP9m6QA4j+o3bV7YBUU1gBgNoxhvOzZk3UIcl3ZfDhLO6dg9TvsUifhTSEAb/K9d+BmO/AgwAQzg5YsojjTIAAAAASUVORK5CYII=">
+                    </button>
+                </div>
+            </form>
+        <form action="{% url 'private:index' %}" method="get">
+            {% csrf_token %}
+            <input type="hidden" name="type" value="{{ essay }}">
+            <button type="submit" name="submit" value="全部">全部</button>
+        </form>
+    </div>
     <div class="cont w1000">
         <div class="title">
         <span class="layui-breadcrumb" lay-separator="|" style="visibility: visible;">
@@ -63,6 +83,20 @@
         </div>
     </div>
     <div class="tablePage">
+    {% if query %}
+        <a href="{% url 'private:query' %}" class="pageBtn" style="text-decoration: none">first</a>
+        {% if page == 1 %}
+            <a href="#" class="pageBtn" style="text-decoration: none">&#8249;</a>
+        {% else %}
+            <a href="{% url 'private:query' %}?page={{ page|add:-1 }}" class="pageBtn" style="text-decoration: none">&#8249;</a>
+        {% endif %}
+        {% if page == pages %}
+            <a href="#" class="pageBtn" style="text-decoration: none">&#8250;</a>
+        {% else %}
+            <a href="{% url 'private:query' %}?page={{ page|add:1}}" class="pageBtn" style="text-decoration: none">&#8250;</a>
+        {% endif %}
+        <a href="{% url 'private:query' %}?page={{ pages }}" class="pageBtn" style="text-decoration: none">last</a>
+    {% else %}
         <a href="{% url 'private:index' %}" class="pageBtn" style="text-decoration: none">first</a>
         {% if page == 1 %}
             <a href="#" class="pageBtn" style="text-decoration: none">&#8249;</a>
@@ -75,6 +109,7 @@
             <a href="{% url 'private:index' %}?page={{ page|add:1}}" class="pageBtn" style="text-decoration: none">&#8250;</a>
         {% endif %}
         <a href="{% url 'private:index' %}?page={{ pages }}" class="pageBtn" style="text-decoration: none">last</a>
+    {% endif %}
     </div>
     <script type="text/javascript" src="{% static 'private/js/layui.js' %}"></script>
     <script>
