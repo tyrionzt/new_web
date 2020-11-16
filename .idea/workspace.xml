@@ -21,6 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fbf6e65e-8bb2-403e-ab22-32490f8ece71" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ip.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/resume/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,24 +56,24 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/fun" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/img" />
-      <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/media/audio" />
-      <recent name="$PROJECT_DIR$/gallery" />
-      <recent name="$PROJECT_DIR$/templates/gallery" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\website\static\fun\imgs" />
       <recent name="C:\Users\Administrator\website\media" />
       <recent name="C:\Users\Administrator\website\templates\index" />
       <recent name="C:\Users\Administrator\website\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/fun" />
+      <recent name="$PROJECT_DIR$/static/fun" />
+      <recent name="$PROJECT_DIR$/static/img" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/media/audio" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.website">
@@ -141,7 +144,8 @@
       <workItem from="1603851617141" duration="64000" />
       <workItem from="1603851707448" duration="650000" />
       <workItem from="1603854859114" duration="251000" />
-      <workItem from="1603979035427" duration="11506000" />
+      <workItem from="1603979035427" duration="16601000" />
+      <workItem from="1605086822595" duration="3652000" />
     </task>
     <servers />
   </component>

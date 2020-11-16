@@ -24,4 +24,5 @@ class ResumeContent(models.Model):
 
 
 class HomeIndex(models.Model):
-    pass
+    ip = models.CharField(max_length=16)  # 225.225.225.225
+    ctime = models.DateTimeField(auto_now=True)
