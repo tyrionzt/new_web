@@ -1,14 +1,15 @@
-from django.conf.urls import url
+from django.urls import path
 from . import views
 
+app_name = "[private]"
 urlpatterns = [
 
-    url(r'^$', views.index, name="index"),
+    path(r'', views.index, name="index"),
 
-    url(r'detail/', views.detail_journal, name="detail"),
+    path(r'detail/', views.detail_journal, name="detail"),
 
-    url(r'query/', views.query_journal, name="query"),
+    path(r'query/', views.query_journal, name="query"),
 
-    url(r'like/', views.like_journal, name="like"),
+    path(r'like/', views.like_journal, name="like"),
 
 ]

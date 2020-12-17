@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from django.http import FileResponse
+from django.http import FileResponse, HttpResponse
 from django.conf import settings
 import os
 
@@ -15,6 +15,14 @@ def index(request):
 def show_recode(request):
     name = request.GET.get('name')
     html = 'fun/' + name + '.html'
+    return render(request, html)
+
+
+def start_action(request):
+    web_game = request.GET.get("game")
+    if not web_game:
+        return HttpResponse("目前%s还未开发， 请稍等" % web_game)
+    html = "fun/" + web_game + ".html"
     return render(request, html)
 
 

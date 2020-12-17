@@ -1,7 +1,8 @@
-from django.conf.urls import url
+from django.urls import path
 from .views import *
 
+app_name = "[gallery]"
 urlpatterns = [
-    url(r'^$', IndexView().get_queryset, name='index'),
-    url(r'^detail$', IndexView().photo_detail, name='detail')
+    path(r'', IndexView().get_queryset, name='index'),
+    path(r'detail', IndexView().photo_detail, name='detail')
 ]

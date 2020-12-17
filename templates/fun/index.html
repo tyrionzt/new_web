@@ -146,13 +146,13 @@
 			<span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span>
 			<h4>贪吃蛇</h4>
 			<p>经典贪吃蛇，在线点击即玩，无需注册，无需登陆，网页将保持最高分记录</p>
-			<a href="eat_sanke.html">开始</a>
+			<a href="{% url 'fun:action' %}?game=eat_sanke">开始</a>
 		</div>
 		<div class="col-md-3 service-grid-agileits">
 			<span class="glyphicon glyphicon-random" aria-hidden="true"></span>
 			<h4>❤️</h4>
             <p>一款纯前端制作的爱心网页，适合给你的另一半一个惊喜。可查看源码直接复制</p></br>
-			<a href="index_love.html">查看</a>
+			<a href="{% url 'fun:action' %}?game=love">查看</a>
 		</div>
 		<div class="col-md-3 service-grid-agileits service-grid-agileits-bottom">
 			<span class="glyphicon glyphicon-yen" aria-hidden="true"></span>

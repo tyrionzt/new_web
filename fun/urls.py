@@ -1,11 +1,14 @@
-from django.conf.urls import url
+from django.urls import path
 from . import views
 
+app_name = "[fun]"
 urlpatterns = [
 
-    url(r'^$', views.index),
+    path(r'', views.index),
 
-    url(r'^show_recode/$', views.show_recode),
+    path(r'show_recode/', views.show_recode),
 
-    url(r'^download/$', views.download_game)
+    path(r'download/', views.download_game),
+
+    path(r'action/', views.start_action, name="action"),
 ]
