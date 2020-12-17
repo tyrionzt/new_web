@@ -34,7 +34,7 @@ body{font: 14px 宋体 Helvetica Neue,Helvetica,PingFang SC,Tahoma,Arial,sans-se
 /*.banner .text::before { position: absolute; right: -5px; content: '\FF1A';}*/
 
 
-.content{padding:100px 0 160px 0;}
+/*.content{padding:100px 0 160px 0;}*/
 .content .cont .title{margin-bottom: 60px;}
 .content .cont .title a{font-size: 16px; color: #000!important;}
 .content .cont .title .layui-breadcrumb span{position: relative; top: -1px; margin:0 16px;}
@@ -272,5 +272,40 @@ body{font: 14px 宋体 Helvetica Neue,Helvetica,PingFang SC,Tahoma,Arial,sans-se
         box-sizing: border-box;}
     .el-pagination--small .arrow.disabled, .el-table .hidden-columns, .el-table td.is-hidden > *, .el-table th.is-hidden > *, .el-table--hidden {
         visibility: hidden
+}
+div.search1 {padding: 30px 0}
+/*.d1 {background: #7BA7AB;}*/
+.d1:after {content:""; clear:both; display:table}
+.d1 form {
+  width: auto;
+  float: right;
+  margin-right: 30px;
+}
+.d1 input {
+  width: 250px;
+  height: 42px;
+  padding-left: 15px;
+  border-radius: 42px;
+  border: 2px solid #324b4e;
+  background: #F9F0DA;
+  outline: none;
+  position: relative;
+  transition: .3s linear;
+}
+.d1 input:focus {
+  width: 300px;
+}
+.d1 button {
+  width: 42px;
+  height: 42px;
+  background: none;
+  border: none;
+  position: absolute;
+  right: 30px;
+}
+.d1 button:before{
+  content: "\f002";
+  font-family: FontAwesome;
+  color: #324b4e;
 }
 

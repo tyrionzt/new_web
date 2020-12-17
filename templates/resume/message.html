@@ -8,7 +8,66 @@
 </head>
 <body>
 <div class="wrapper" id="home">
-	<h1>欢迎光临留言板<br /><span>如果需要删除留言，请联系本人：16620810445</span><br /><a href="/"> 去留言 </a></h1>
+	<h1>欢迎光临留言板<br /><span>如果需要删除留言，请联系本人：16620810445</span><br />
+    <div class="btnDiv">
+        <div>
+            <input id="addBtn" type="checkbox" style="opacity: 0">
+            <label for="addBtn" style=" position: relative;left: -26px;">
+                <span class="spanBtn" style="margin-bottom: 10px;">留言</span>
+            </label>
+            <div id="close" class="el-dialog__wrapper addForms" style="z-index: 2001;">
+                <div role="dialog" aria-modal="true" aria-label="new" class="el-dialog el-dialog--center" style="margin-top: 15vh;width: 30%;margin-left: 35%;background: #375f5f;">
+                    <div class="el-dialog__header">
+                        <span class="el-dialog__title">良言一句，值黄金万两</span>
+                    </div>
+                    <form action="{% url 'resume:savem' %}" method="post">
+                        {% csrf_token %}
+                    <div class="el-dialog__body">
+
+                            <div class="el-form-item ">
+                                <label class="el-form-item__label" style="width: 110px;margin-left: -50%">姓名</label>
+                                <div class="el-form-item__content">
+                                    <div class="el-input">
+                                        <input type="hidden" class="normalInput" name="module" value="torin">
+                                        <input style="width: 50%;height: 35px" type="text" autocomplete="off" placeholder="留下您的大名" class="el-input__inner" name="name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="el-form-item ">
+                                <label class="el-form-item__label" style="width: 110px;margin-left: -41%">联系方式</label>
+                                <div class="el-form-item__content">
+                                    <div class="el-input">
+                                        <input style="width: 50%;height: 35px" type="text" autocomplete="off" placeholder="可不填" class="el-input__inner" name="email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="el-form-item__content">
+                                <div class="el-input">
+                                    <textarea name="message" required placeholder="留言区" style="width: 90%; height: 100px; border: black;color: black;"></textarea>
+                                </div>
+                            </div>
+                            <!-- 按钮组-->
+                            <div class="el-dialog__footer">
+                                <span class="dialog-footer">
+                                    <label for="addBtn" style="display: block;margin-right: 50%;">
+                                        <span class="spanBtn" style="width: 68px;margin-right: 30%;height: 20px">取消</span>
+                                    </label>
+                                    <label style="margin-top: -32px;display: block;">
+                                        <button type="submit" style="background: transparent;border: none;outline: none;margin-right: 10%;height: 30px">
+                                            <span class="spanBtn" style="width: 68px;margin-right: 10px;">确定</span>
+                                        </button>
+
+                                    </label>
+
+                                </span>
+                            </div>
+                    </div></form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
     {% for message in messages %}
 	<div class="ds-post-main">
 		<div class="ds-avatar">

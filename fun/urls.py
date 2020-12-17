@@ -5,7 +5,7 @@ urlpatterns = [
 
     url(r'^$', views.index),
 
-    url(r'^show_rcode/$', views.show_rcode),
+    url(r'^show_recode/$', views.show_recode),
 
     url(r'^download/$', views.download_game)
 ]

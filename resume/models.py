@@ -8,7 +8,7 @@ from django.db import models
 
 class Message(models.Model):
     name = models.CharField(max_length=20)
-    email = models.EmailField()
+    email = models.CharField(max_length=200)
     contents = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
 

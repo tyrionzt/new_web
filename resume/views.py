@@ -5,18 +5,21 @@ from django.shortcuts import render
 from django.conf import settings
 from django.http import FileResponse, HttpResponseRedirect
 from .models import Message
+import os
 from django.core.paginator import Paginator
+from Utils.general import resume_ana
 
 
 # Create your views here.
 def index(request):
-    motto = "满招损，谦受益！"
-    return render(request, 'resume/resume.html', {"motto": motto})
+    context = resume_ana()
+    return render(request, 'resume/resume.html', context)
 
 
 def download_resuem(request):
-    file = open(settings.BASE_DIR + '/media/resume.pdf', 'rb')
-    response = FileResponse(file)
+    resume_path = os.path.join(os.path.join(settings.BASE_DIR, "media"), "resume.pdf")
+    resume = open(resume_path, 'rb')
+    response = FileResponse(resume)
     response['Content-Type'] = 'application/octet-stream'
     response['Content-Disposition'] = 'attachment;filename="resume.pdf"'
     return response
@@ -42,7 +45,7 @@ def save_message(request):
     lmessage.contents = message
     lmessage.save()
 
-    return HttpResponseRedirect('/')
+    return HttpResponseRedirect('/resume/show_message/')
 
 
 def show_message(request):

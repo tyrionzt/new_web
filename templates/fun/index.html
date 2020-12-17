@@ -20,7 +20,7 @@
 <script src="{% static 'fun/js/bootstrap.js'%}"></script>
 
 </head>
-<body> 
+<body>
 <!-- Header -->
 	<div class="header">
 		<!-- Navbar -->
@@ -37,15 +37,6 @@
 					<a  href="index.html"><h1>Games <img src="{% static 'fun/images/c1.png' %}" alt=" " /> Zone</h1></a>
 				</div>
 
-{#				<div id="navbar" class="navbar-collapse collapse">#}
-{#					<ul class="nav navbar-nav navbar-right">#}
-{#						<li class="hover-effect"><a href="index.html">Home</a></li>#}
-{#						<li class="hover-effect"><a href="about.html">About</a></li>#}
-{#						<li class="hover-effect"><a href="games.html">Games</a></li>#}
-{#						<li class="hover-effect"><a href="news.html">News</a></li>#}
-{#						<li class="hover-effect"><a href="contact.html">Contact</a></li>#}
-{#					</ul>#}
-{#				</div>#}
 
 			</div>
 		</nav>
@@ -88,29 +79,29 @@
 <div class="trend-w3layouts">
 	<div class="container">
 		<h2>游戏趋势</h2>
-		<ul id="flexiselDemo1">			
+		<ul id="flexiselDemo1">
 				<li>
 					<div class="trend-grid">
 						<h4>赛车游戏</h4>
-						<img src="{% static 'fun/images/tg1.jpg' %}" alt=" " class="img-responsive" />
+						<a href="single.html"><img src="{% static 'fun/images/tg1.jpg' %}" alt=" " /></a>
 					</div>
 				</li>
 				<li>
 					<div class="trend-grid">
 						<h4>3D 游戏</h4>
-						<img src="{% static 'fun/images/tg2.jpg' %}" alt=" " class="img-responsive" />
+						<a href="single.html"><img src="{% static 'fun/images/tg2.jpg' %}" alt=" " /></a>
 					</div>
 				</li>
 				<li>
 					<div class="trend-grid">
 						<h4>动作游戏</h4>
-						<img src="{% static 'fun/images/tg3.jpg' %}" alt=" " class="img-responsive" />
+						<a href="single.html"><img src="{% static 'fun/images/tg3.jpg' %}" alt=" " /></a>
 					</div>
 				</li>
 				<li>
 					<div class="trend-grid">
 						<h4>玩具游戏</h4>
-						<img src="{% static 'fun/images/tg4.jpg' %}" alt=" " class="img-responsive" />
+						<a href="single.html"><img src="{% static 'fun/images/tg4.jpg' %}" alt=" " /></a>
 					</div>
 				</li>
 			</ul>
@@ -120,25 +111,25 @@
 									visibleItems: 4,
 									animationSpeed: 1000,
 									autoPlay: true,
-									autoPlaySpeed: 3000,    		
+									autoPlaySpeed: 3000,
 									pauseOnHover: true,
 									enableResponsiveBreakpoints: true,
-									responsiveBreakpoints: { 
-										portrait: { 
+									responsiveBreakpoints: {
+										portrait: {
 											changePoint:480,
 											visibleItems: 2
-										}, 
-										landscape: { 
+										},
+										landscape: {
 											changePoint:640,
 											visibleItems:3
 										},
-										tablet: { 
+										tablet: {
 											changePoint:768,
 											visibleItems: 4
 										}
 									}
 								});
-								
+
 							});
 					</script>
 					<script type="text/javascript" src="{% static 'fun/js/jquery.flexisel.js' %}"></script>
@@ -155,24 +146,24 @@
 			<span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span>
 			<h4>贪吃蛇</h4>
 			<p>经典贪吃蛇，在线点击即玩，无需注册，无需登陆，网页将保持最高分记录</p>
-			<a href="single.html">开始</a>
+			<a href="eat_sanke.html">开始</a>
 		</div>
 		<div class="col-md-3 service-grid-agileits">
 			<span class="glyphicon glyphicon-random" aria-hidden="true"></span>
-			<h4>敬请期待</h4>
-			<p>期待下一款网页游戏吧</p>
-			<a href="single.html">开始</a>
+			<h4>❤️</h4>
+            <p>一款纯前端制作的爱心网页，适合给你的另一半一个惊喜。可查看源码直接复制</p></br>
+			<a href="index_love.html">查看</a>
 		</div>
 		<div class="col-md-3 service-grid-agileits service-grid-agileits-bottom">
 			<span class="glyphicon glyphicon-yen" aria-hidden="true"></span>
 			<h4>敬请期待</h4>
-			<p>期待下一款网页游戏吧</p>
+			<p>期待下一款网页游戏吧</p></br>
 			<a href="single.html">开始</a>
 		</div>
 		<div class="col-md-3 service-grid-agileits service-grid-agileits-bottom">
 			<span class="glyphicon glyphicon-object-align-right" aria-hidden="true"></span>
 			<h4>敬请期待</h4>
-			<p>期待下一款网页游戏吧</p>
+			<p>期待下一款网页游戏吧</p></br>
 			<a href="single.html">开始</a>
 		</div>
 		<div class="clearfix"></div>
@@ -275,7 +266,7 @@
 					</div>
 				</section>
 						<!-- flexSlider -->
-							
+
 							<script defer src="{% static 'fun/js/jquery.flexslider.js' %}"></script>
 							<script type="text/javascript">
 							$(window).load(function(){

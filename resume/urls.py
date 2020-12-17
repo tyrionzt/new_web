@@ -26,7 +26,7 @@ urlpatterns = [
 
     url(r'^wechat/$', views.wechat),
 
-    url(r'^save_message/$', views.save_message),
+    url(r'^save_message/$', views.save_message, name="savem"),
 
     url(r'show_message/', views.show_message),
 
